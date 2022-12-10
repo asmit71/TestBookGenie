@@ -1,0 +1,85 @@
+.comparison {
+    margin-top:2.5em;
+}
+.comparison > * {
+    position:relative;
+    padding:0;
+    text-align:center;
+}
+.comparison > :nth-child(2) {
+    z-index:10;
+    box-shadow:0 5px 10px rgba(0, 0, 0, 25%);
+}
+.comparison > :nth-child(2):before {
+    content:"Most Popular";
+    display:block;
+    position:absolute;
+    top:-2em;
+    left:0;
+    right:0;
+    line-height:2em;
+    background:#000;
+    color:#fff;
+    border-top-left-radius:.4em;
+    border-top-right-radius:.4em;
+}
+.comparison ul {
+    list-style:none;
+    margin:0;
+    padding:0;
+    background:#fff;
+}
+.comparison li {
+    white-space:nowrap;
+    line-height:2.2em;
+    border-top:1px solid #eee;
+}
+.comparison li:first-child {
+    border-top:0;
+}
+.comparison li.tick:before {
+    content: '✓ ';
+    color:#006e37;
+    font-weight:bold;
+    font-size:1.3em;
+}
+.comparison li.cross:before {
+    content: '✗ ';
+    color:#ec1358;
+    font-weight:bold;
+    font-size:1.3em;
+}
+.comparison h3 {
+    margin:0;
+    padding:.4em 0 0;
+}
+.comparison .price {
+    margin:0 0 .2em;
+    font-size:2em;
+    font-weight:bold;
+}
+.comparison span {
+    display:none;
+}
+.comparison .button {
+    display:inline-block;
+    margin:.5em 0;
+    padding:.4em .5em;
+    background:#fff;
+    color:#000;
+    text-decoration:none;
+    font-weight:bold;
+    border-radius:.4em;
+}
+.comparison > :nth-child(2) .button {
+    background:#000;
+    color:#fff;
+}
+@media (min-width:900px) {
+    .comparison {
+        margin:2.5em calc(8px + 1.5625vw);
+    }
+    .comparison span {
+        display:inline;
+    }
+}
